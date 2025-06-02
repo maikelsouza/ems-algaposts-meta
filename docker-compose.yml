@@ -10,7 +10,8 @@ services:
       RABBITMQ_DEFAULT_PASS: rabbitmq
     volumes:
       - algaposts-rabbitmq:/var/lib/rabbitmq/
-      - ./config/rabbitmq/enabled_plugins:/etc/rabbitmq/enabled/plugins
+      - ./configs/rabbitmq/enabled_plugins:/etc/rabbitmq/enabled_plugins
 volumes:
    algaposts-rabbitmq:
+
 
