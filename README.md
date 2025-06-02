@@ -15,6 +15,8 @@ The system will be responsible for sending the posts, calculating the value of e
 
 The diagram below shows how the Comment and Moderation microservices communicate asynchronous via RabbitMQ.
 
+![img.png](img.png)
+
 ## Microservice: Post-service
 
 This microservice is responsible for:
@@ -44,11 +46,11 @@ There are three endpoints:
 
 This microservice is responsible for:
 
-Consume the text-processor-service.post-processing.v1.q queue.
-Process the body field of the received post.
-Calculate:
-- The number of words in the body of the text.
-- The estimated value (words * $0.10).
+- Consume the queue.
+- Process the body field of the received post.
+- Calculate:
+  - The number of words in the body of the text.
+  - The estimated value (words * $0.10).
 
 ### Repository
 
